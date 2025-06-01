@@ -1,4 +1,4 @@
-import ContactInfo from "../components/molecules/ContactInfo";
+import Contacts from "../components/molecules/Contacts";
 import SlideShow from "../components/molecules/SlideShow";
 
 
@@ -6,7 +6,7 @@ export default function HomePage() {
     return (
         <>
             <SlideShow />
-            <ContactInfo />
+            <Contacts />
         </>
     );
 }

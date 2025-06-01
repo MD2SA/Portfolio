@@ -1,7 +1,7 @@
-
 import { useState } from "react";
 import DonkeyKong from "../../assets/images/DonkeyKong.png";
-import Project from "../atoms/Project";
+import { MdOutlineNavigateBefore, MdOutlineNavigateNext } from "react-icons/md";
+import "../../assets/css/SlideShow.css"
 
 
 const projects: { title: string, img: string }[] = [
@@ -27,12 +27,31 @@ export default function SlideShow() {
     };
 
     return (
-        <div>
+        <div className="big-container">
             <h2>Projects</h2>
-            <Project title={projects[cur].title} img={projects[cur].img} />
-            <button onClick={goBack}>GO BACK</button>
-            <button>See More</button>
-            <button onClick={goForward}>GO FORWARD</button>
+            <div className="container" style={{ paddingTop: 0, }}>
+                <h3>{projects[cur].title}</h3>
+                <img
+                    src={projects[cur].img}
+                    className="project-image"
+                />
+            </div>
+            <div className="slideshow-navigationContainer">
+                <MdOutlineNavigateBefore
+                    onClick={goBack}
+                    className="slideshow-navigateIcon"
+                />
+                <button
+                    onClick={() => console.log("HELLO")}
+                    className="slideshow-seeMore"
+                >
+                    See More
+                </button>
+                <MdOutlineNavigateNext
+                    onClick={goForward}
+                    className="slideshow-navigateIcon"
+                />
+            </div>
         </div>
     );
 }
