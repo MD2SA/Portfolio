@@ -1,10 +1,76 @@
 .homepage-container {
     display: flex;
     flex-direction: row;
-    width: 100vw;
+    width: 100%;
     justify-content: space-evenly;
 }
 
 .homepage-wide {
+    display: flex;
+    /* Adiciona flexbox */
     flex-direction: column;
+    /* Mantém os elementos empilhados verticalmente */
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto;
+    height: 100vh;
+    box-sizing: border-box;
+    padding-right: 20px;
+    padding-bottom: 20vh;
+    gap: 40px;
+}
+
+.homepage-narrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Versão Glassmorphism com scrollbar mais baixa */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(15, 15, 15, 0.4);
+    border-radius: 12px;
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(80, 80, 80, 0.5);
+    border-radius: 12px;
+    border: 2px solid transparent;
+    /* Borda transparente para reduzir altura */
+    background-clip: padding-box;
+    /* Faz o background não cobrir a borda */
+    min-height: 30px;
+    /* Altura mínima do thumb */
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(110, 110, 110, 0.7);
+    backdrop-filter: brightness(1.2);
+    transform: scaleX(1.08);
+}
+
+/* Animação de brilho */
+@keyframes scrollbarGlow {
+    0% {
+        box-shadow: 0 0 0 rgba(120, 120, 120, 0);
+    }
+
+    50% {
+        box-shadow: 0 0 6px rgba(120, 120, 120, 0.3);
+    }
+
+    100% {
+        box-shadow: 0 0 0 rgba(120, 120, 120, 0);
+    }
+}
+
+::-webkit-scrollbar-thumb:active {
+    animation: scrollbarGlow 1.5s ease;
 }

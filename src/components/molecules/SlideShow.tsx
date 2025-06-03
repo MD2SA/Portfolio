@@ -1,17 +1,20 @@
 import { useState } from "react";
 import DonkeyKong from "../../assets/images/DonkeyKong.png";
+import NOGS from "../../assets/images/NOGS.png";
 import { MdOutlineNavigateBefore, MdOutlineNavigateNext } from "react-icons/md";
 import "../../css/SlideShow.css"
 
 
-const projects: { title: string, img: string }[] = [
+const projects: { title: string, img: string, description: string }[] = [
     {
         title: "DonkeyKong",
         img: DonkeyKong,
+        description: "Something something",
     },
     {
         title: "NOGS",
-        img: DonkeyKong,
+        img: NOGS,
+        description: "Something something",
     },
 ]
 

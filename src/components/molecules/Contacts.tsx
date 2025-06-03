@@ -2,7 +2,6 @@ import { MdOutlineMailOutline } from "react-icons/md";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6"
 import ContactInfo from "../atoms/ContactInfo";
-import "../../css/Contacts.css";
 
 
 export default function Contacts() {
