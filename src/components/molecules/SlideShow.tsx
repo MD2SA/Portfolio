@@ -1,7 +1,7 @@
 import { useState } from "react";
 import DonkeyKong from "../../assets/images/DonkeyKong.png";
 import { MdOutlineNavigateBefore, MdOutlineNavigateNext } from "react-icons/md";
-import "../../assets/css/SlideShow.css"
+import "../../css/SlideShow.css"
 
 
 const projects: { title: string, img: string }[] = [
@@ -27,9 +27,9 @@ export default function SlideShow() {
     };
 
     return (
-        <div className="big-container">
+        <div className="big-container slideshow-bigContainer">
             <h2>Projects</h2>
-            <div className="container" style={{ paddingTop: 0, }}>
+            <div className="slideshow-container" style={{ paddingTop: 0, }}>
                 <h3>{projects[cur].title}</h3>
                 <img
                     src={projects[cur].img}

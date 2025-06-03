@@ -1,0 +1,79 @@
+.marquee-wrapper {
+    overflow: hidden;
+    width: 100%;
+    max-width: max(450px, 50vw);
+    border-top: 1px solid #4a4a4a;
+    border-bottom: 1px solid #4a4a4a;
+}
+
+.marquee-track {
+    display: flex;
+    gap: 1.5rem;
+    /* Consistent with slideshow spacing */
+    padding: 0.5rem 0;
+    animation: scroll 30s linear infinite;
+    width: max-content;
+}
+
+.container-techIcon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 80px;
+    padding: 1rem;
+    background-color: #2a2a2a;
+    /* Darker than container */
+    border-radius: 20px;
+    /* Slightly softer than slideshow */
+    border: 1px solid #4a4a4a;
+    /* Subtle border like slideshow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Lighter shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Matching slideshow */
+}
+
+/* Icon Styling (Light Color) */
+.container-techIcon {
+    font-size: 2rem;
+    color: #f0f0f0;
+    /* Light text for contrast */
+}
+
+/* Text Styling */
+.container-techIcon span {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #e0e0e0;
+    /* Slightly dimmer than icon */
+}
+
+/* Hover Effect (Like Slideshow Buttons) */
+.container-techIcon:hover {
+    transform: translateY(-2px);
+    /* Same lift effect */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    /* Deeper shadow */
+    background-color: #3a3a3a;
+    /* Lighten on hover */
+}
+
+/* Animation (Seamless Loop) */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Optional: Pause on Hover */
+.marquee-wrapper:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+
+

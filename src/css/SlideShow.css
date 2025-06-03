@@ -1,4 +1,8 @@
-.container {
+.slideshow-bigContainer {
+    max-width: 420px;
+}
+
+.slideshow-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -74,6 +78,7 @@
     background-color: #4a4a4a;
     transform: scale(1.1);
 }
+
 .slideshow-navigateIcon:active {
     transform: scale(1);
 }

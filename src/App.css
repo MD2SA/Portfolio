@@ -1,23 +1,15 @@
-#root {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem;
-    text-align: center;
+.big-container {
+    display: flex;
+    flex-direction: column;
 }
 
-
-h2 {
+.big-container h2 {
     text-align: left;
     margin-bottom: 4px;
     padding-left: 20px;
 }
 
-h3 {
+.big-container h3 {
     margin: 4px;
     color: #9ca3af;
-}
-
-.big-container {
-    display: flex;
-    flex-direction: column;
 }
