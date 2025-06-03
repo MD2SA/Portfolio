@@ -3,7 +3,7 @@ import "../../css/Description.css"
 
 export default function Description() {
     return (
-        <div className="">
+        <div>
             <h1 className="description-title">Computer Science & Business Student - ISCTE</h1>
             <div className="description-container description-content">
                 <p className="description-text">

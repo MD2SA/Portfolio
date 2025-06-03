@@ -89,7 +89,6 @@
 .contacts-container {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
     max-width: 420px;
     padding: 1rem;
 }
@@ -133,4 +132,85 @@
     color: #ffffff;
     flex-shrink: 0;
     filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.2));
+}
+
+
+/* Languages.css */
+.languages-container {
+    display: flex;
+    max-width: 300px;
+    gap: 1rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+}
+
+
+.language {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100px;
+    position: relative;
+    overflow: hidden;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    padding: 10px 10px;
+    background-color: rgba(30, 30, 30, 0.7);
+    border-radius: 12px;
+    border: 1px solid rgba(70, 70, 70, 0.5);
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.2),
+        inset 0 1px 1px rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(4px);
+}
+
+.language-flag {
+    width: 34px;
+    height: 34px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.language:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.language-level {
+    margin: 0;
+    font-weight: 500;
+    font-size: 0.85rem;
+    color: #f0f0f0;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+    .languages-container {
+        gap: 1rem;
+        padding: 1.25rem;
+        width: 90%;
+    }
+
+    .language {
+        padding: 0.6rem 1rem;
+    }
+
+    .language-flag {
+        width: 30px;
+        height: 30px;
+    }
+
+    .language-level {
+        font-size: 0.8rem;
+    }
 }

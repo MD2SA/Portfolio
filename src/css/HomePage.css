@@ -15,7 +15,7 @@
     overflow-y: auto;
     height: 100vh;
     box-sizing: border-box;
-    padding-right: 20px;
+    padding: 20px;
     padding-bottom: 20vh;
     gap: 40px;
 }
@@ -73,4 +73,10 @@
 
 ::-webkit-scrollbar-thumb:active {
     animation: scrollbarGlow 1.5s ease;
+}
+
+@media (max-width: 840px) {
+    .homepage-narrow {
+        display: none;
+    }
 }
