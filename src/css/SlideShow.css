@@ -10,7 +10,7 @@
 .slideshow-details-button {
     position: absolute;
     /* Ajuste este valor para posicionar acima da imagem */
-    top: 26px;
+    top: 30px;
     right: 8px;
     cursor: pointer;
     color: #fff;

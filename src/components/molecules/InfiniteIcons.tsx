@@ -54,7 +54,7 @@ function renderRow(icons: IconItem[], row: number) {
 
 export default function InfiniteIcons() {
     return (
-        <div className="bigContainer">
+        <div className="bigContainer infiniteIcons-container">
             <h2>Languages, FrameWorks and Tools</h2>
             <div className="marquee-wrapper">
                 {iconRows.map((list: IconItem[], row: number) => renderRow(list, row))}

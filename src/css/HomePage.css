@@ -3,6 +3,8 @@
     flex-direction: row;
     width: 100%;
     justify-content: space-evenly;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards 0.5s;
 }
 
 .homepage-wide {
@@ -18,6 +20,19 @@
     padding: 20px;
     padding-bottom: 20vh;
     gap: 40px;
+    scroll-behavior: smooth;
+    transition: scroll-behavior 2s ease;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .homepage-narrow {
@@ -26,53 +41,58 @@
     align-items: center;
 }
 
-/* Versão Glassmorphism com scrollbar mais baixa */
+/* Enhanced Glassmorphism Scrollbar */
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 8px;
+    /* Slightly wider for better visibility */
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(15, 15, 15, 0.4);
+    background: rgba(20, 20, 20, 0.6);
+    /* Darker track for more contrast */
     border-radius: 12px;
-    border-left: 1px solid rgba(255, 255, 255, 0.05);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(8px);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(80, 80, 80, 0.5);
+    background: rgba(120, 120, 120, 0.7);
+    /* Brighter thumb */
     border-radius: 12px;
-    border: 2px solid transparent;
-    /* Borda transparente para reduzir altura */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    /* Subtle border */
     background-clip: padding-box;
-    /* Faz o background não cobrir a borda */
-    min-height: 30px;
-    /* Altura mínima do thumb */
-    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    min-height: 40px;
+    /* Taller minimum height */
+    transition: all 0.4s ease-out;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(110, 110, 110, 0.7);
-    backdrop-filter: brightness(1.2);
-    transform: scaleX(1.08);
+    background: rgba(160, 160, 160, 0.8);
+    /* More visible hover state */
+    transform: scaleX(1.1);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+    /* Soft glow */
 }
 
-/* Animação de brilho */
+/* Enhanced glow animation */
 @keyframes scrollbarGlow {
     0% {
-        box-shadow: 0 0 0 rgba(120, 120, 120, 0);
+        box-shadow: 0 0 0 rgba(180, 180, 180, 0);
     }
 
     50% {
-        box-shadow: 0 0 6px rgba(120, 120, 120, 0.3);
+        box-shadow: 0 0 10px rgba(180, 180, 180, 0.4);
     }
 
     100% {
-        box-shadow: 0 0 0 rgba(120, 120, 120, 0);
+        box-shadow: 0 0 0 rgba(180, 180, 180, 0);
     }
 }
 
 ::-webkit-scrollbar-thumb:active {
-    animation: scrollbarGlow 1.5s ease;
+    background: rgba(200, 200, 200, 0.9);
+    animation: scrollbarGlow 1s ease;
 }
 
 @media (max-width: 840px) {
