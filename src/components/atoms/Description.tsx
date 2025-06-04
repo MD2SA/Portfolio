@@ -8,7 +8,7 @@ export default function Description() {
             <div className="description-content">
                 <p className="description-text">
                     I’ve just completed my second year in Computer Science and Business Management at ISCTE.
-                    I’m passionate about writing clean, reliable code and developing secure, scalable,
+                    I’m strongly committed to writing clean, reliable code and developing secure, scalable,
                     and high-performance solutions. Beyond the technical side, I’m deeply
                     interested in the intersection of technology, business, and finance,
                     always looking for ways to bridge them through software.

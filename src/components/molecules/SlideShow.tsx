@@ -4,6 +4,7 @@ import NOGS from "../../assets/images/NOGS.png";
 import Confidential from "../../assets/images/Confidential.png";
 import { MdOutlineNavigateBefore, MdOutlineNavigateNext } from "react-icons/md";
 import "../../css/SlideShow.css";
+import { FaRegQuestionCircle } from "react-icons/fa";
 
 const projects = [
     {
@@ -26,15 +27,22 @@ const projects = [
 export default function SlideShow() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isHovering, setIsHovering] = useState(false);
+    const [showDetail, setShowDetail] = useState(false);
 
     const goBack = () => setCurrentIndex((prev) => (prev - 1 + projects.length) % projects.length);
     const goForward = () => setCurrentIndex((prev) => (prev + 1) % projects.length);
 
     const currentProject = projects[currentIndex];
+    const handleDetailClick = () => {
+        //for phone
+        if (isHovering && !showDetail) setIsHovering(false);
+        else setShowDetail(!showDetail)
+    }
 
     return (
         <div className="big-container slideshow-container">
             <h2>Projects</h2>
+            <FaRegQuestionCircle className="slideshow-details-button" onClick={handleDetailClick} />
             <div
                 onMouseEnter={() => setIsHovering(true)}
                 onMouseLeave={() => setIsHovering(false)}
@@ -45,7 +53,7 @@ export default function SlideShow() {
                         className="slideshow-image"
                         alt={currentProject.title}
                     />
-                    <div className={`slideshow-description ${isHovering ? "visible" : ""}`}>
+                    <div className={`slideshow-description ${showDetail || isHovering ? "visible" : ""}`}>
                         <p>{currentProject.description}</p>
                     </div>
                 </div>
