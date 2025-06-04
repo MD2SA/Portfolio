@@ -1,6 +1,7 @@
 import { useState } from "react";
 import DonkeyKong from "../../assets/images/DonkeyKong.png";
 import NOGS from "../../assets/images/NOGS.png";
+import Confidential from "../../assets/images/Confidential.png";
 import { MdOutlineNavigateBefore, MdOutlineNavigateNext } from "react-icons/md";
 import "../../css/SlideShow.css";
 
@@ -15,6 +16,11 @@ const projects = [
         img: NOGS,
         description: "NOGS is a full-stack typing game platform where users can sharpen their typing speed, challenge random opponents, and connect with friends in real-time multiplayer races.",
     },
+    {
+        title: "Confidential",
+        img: Confidential,
+        description: "I am currently developing a full-stack mobile app. For this project, I had to scrape multiple files from the internet to populate the information database. Aside from that, the details are confidential.",
+    }
 ];
 
 export default function SlideShow() {
