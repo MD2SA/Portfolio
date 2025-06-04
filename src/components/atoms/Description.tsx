@@ -3,9 +3,9 @@ import "../../css/Description.css"
 
 export default function Description() {
     return (
-        <div>
-            <h1 className="description-title">Computer Science & Business Student - ISCTE</h1>
-            <div className="description-container description-content">
+        <div className="description-container">
+            <h1 className="description-title">Computer Science & Business Management Student - ISCTE</h1>
+            <div className="description-content">
                 <p className="description-text">
                     I’ve just completed my second year in Computer Science and Business Management at ISCTE.
                     I’m passionate about writing clean, reliable code and developing secure, scalable,
