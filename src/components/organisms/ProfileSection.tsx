@@ -8,6 +8,10 @@ export default function ProfileSection() {
     return (
         <>
             <Avatar imageUrl={avatar} />
+            <h1 className="name-heading">
+                Manuel Albuquerque,<br />
+                <small>from Lisboa, Portugal</small>
+            </h1>
             <Contacts />
             <Languages />
         </>
