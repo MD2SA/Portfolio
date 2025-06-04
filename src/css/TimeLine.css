@@ -30,12 +30,20 @@
 
 .timeline-item:nth-child(odd) {
     left: 0;
-    text-align: right;
+    text-align: left;
+}
+
+.timeline-item:nth-child(odd) .timeline-more-container {
+    flex-direction: row;
 }
 
 .timeline-item:nth-child(even) {
     left: 50%;
-    text-align: left;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) .timeline-more-container {
+    flex-direction: row-reverse;
 }
 
 .timeline-dot {
@@ -71,7 +79,7 @@
 }
 
 .timeline-content {
-    padding: 0px  1.5rem;
+    padding: 0px 1.5rem;
     padding-bottom: 1rem;
     background-color: rgba(30, 30, 30, 0.7);
     border-radius: 16px;
@@ -83,6 +91,12 @@
     transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     position: relative;
     overflow: hidden;
+}
+
+.timeline-more-container {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
 }
 
 .timeline-item:hover .timeline-content {
@@ -208,4 +222,8 @@
         margin-left: 0 !important;
         margin-right: 0 !important;
     }
+}
+
+.timeline-link {
+    padding: 0;
 }
