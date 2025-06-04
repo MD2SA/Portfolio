@@ -100,7 +100,7 @@
 
 .nav-icon:active {
     color: #ffffff;
-    transform: translateY(1px);
+    transform: translateY(-1px);
     box-shadow:
         0 4px 15px rgba(0, 0, 0, 0.3),
         inset 0 1px 3px rgba(255, 255, 255, 0.1);
