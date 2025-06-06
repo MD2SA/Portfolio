@@ -5,7 +5,7 @@ const events: { title: string, time: string, complement?: string, description: s
         title: "BSc in Computer Science and Business Management – ISCTE-IUL",
         time: "now",
         complement: "Grade: 17/20",
-        description: "I'm currently in the 3rd year of a 4-year degree program. Studying key topics such as algorithms, data structures and databases, along with finance, accounting and project evaluation",
+        description: "Currently starting the 3rd year of a 4-year degree program. Studying key topics such as algorithms, data structures and databases, along with finance, accounting and project evaluation",
         url: "https://www.iscte-iul.pt/degree/code/9189/bachelor-degree-in-computer-science-and-business-management/studyplan",
     },
     {

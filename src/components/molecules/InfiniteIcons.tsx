@@ -59,7 +59,6 @@ export default function InfiniteIcons() {
             <div className="marquee-wrapper">
                 {iconRows.map((list: IconItem[], row: number) => renderRow(list, row))}
             </div>
-            <Link to={"/all"}>➥See more</Link>
         </div>
 
     );

@@ -1,7 +1,11 @@
-.infiniteIcons-container {
+.icons-container {
     max-width: 600px;
     width: 80%;
+
 }
+
+/* .infiniteIcons-container { */
+/* } */
 
 .marquee-wrapper {
     overflow: hidden;
@@ -73,6 +77,17 @@
     cursor: pointer;
 }
 
+.tools-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.icon-section {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #4a4a4a;
+}
 
 /* .marquee-wrapper:hover .marquee-track { */
 /*     animation-play-state: paused; */
