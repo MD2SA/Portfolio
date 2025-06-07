@@ -10,12 +10,12 @@ export default function IconsSection() {
                 (
                     <div className="icons-container">
                         <InfiniteIcons />
-                        <a onClick={() => setShowInfinite(false)}>➥See more</a>
+                        <a onClick={() => setShowInfinite(false)}>➥Expand</a>
                     </div>
                 ) : (
                     <div className="icons-container">
                         <ToolsIcons />
-                        <a onClick={() => setShowInfinite(true)}>➥Less</a>
+                        <a onClick={() => setShowInfinite(true)}>➥Reduce</a>
                     </div>
                 )
             }
