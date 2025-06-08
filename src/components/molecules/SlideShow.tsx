@@ -11,7 +11,7 @@ const projects = [
     {
         title: "DonkeyKong",
         img: DonkeyKong,
-        description: "A modern reimagining of the classic Donkey Kong arcade game, built entirely in Java. Features updated graphics, smoother controls, and nostalgic gameplay true to the original.",
+        description: "This is a 2D game inspired by the classic Donkey Kong, developed entirely in Java. The project was originally created as part of the Object-Oriented Programming course, and is currently taking updates for new features",
         technologies: [
             { name: "Java", icon: FaJava },
         ],
@@ -19,7 +19,7 @@ const projects = [
     {
         title: "NOGS",
         img: NOGS,
-        description: "NOGS is a full-stack typing game platform where users can sharpen their typing speed, challenge random opponents, and connect with friends in real-time multiplayer races.",
+        description: "NOGS is a full-stack typing game platform where users can improve their typing speed, compete against random opponents, and connect with friends or join teams.",
         technologies: [
             { name: "Python", icon: SiPython },
             { name: "JavaScript", icon: SiJavascript },
