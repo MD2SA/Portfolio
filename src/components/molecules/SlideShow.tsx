@@ -70,20 +70,20 @@ export default function SlideShow() {
                         className="slideshow-image"
                         alt={currentProject.title}
                     />
+                    <div className={`slideshow-icons ${showDetail || isHovering ? "visible" : ""}`}>
+                        {
+                            currentProject.technologies.map((tech, index) => {
+                                const { name, icon: Icon } = tech;
+                                return (
+                                    <div key={`tech-${index}`} className="container-techIcon">
+                                        <Icon />
+                                        <span>{name}</span>
+                                    </div>
+                                );
+                            })
+                        }
+                    </div>
                     <div className={`slideshow-description ${showDetail || isHovering ? "visible" : ""}`}>
-                        <div style={{ display: "flex", flexDirection: "row" }}>
-                            {
-                                currentProject.technologies.map((tech, index) => {
-                                    const { name, icon: Icon } = tech;
-                                    return (
-                                        <div key={`tech-${index}`} className="container-techIcon">
-                                            <Icon />
-                                            <span>{name}</span>
-                                        </div>
-                                    );
-                                })
-                            }
-                        </div>
                         <p>{currentProject.description}</p>
                     </div>
                 </div>
