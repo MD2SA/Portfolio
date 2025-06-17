@@ -66,10 +66,16 @@ export default function SlideShow() {
     return (
         <div className="big-container slideshow-container">
             <h2>Projects</h2>
-            <FaGithub
-                onClick={currentProject.github ? () => window.open(currentProject.github, "_blank") : undefined}
-                className="slideshow-details-button"
-            />
+            {currentProject.github ?
+                (
+                    <FaGithub
+                        onClick={() => window.open(currentProject.github, "_blank")}
+                        className="slideshow-details-button"
+                    />
+                ) : (
+                    null
+                )
+            }
             <div
                 onMouseEnter={() => setIsHovering(true)}
                 onMouseLeave={() => setIsHovering(false)}
