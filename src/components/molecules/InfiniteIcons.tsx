@@ -1,42 +1,7 @@
-import type { IconType } from "react-icons";
-import { SiReact, SiTypescript, SiJavascript, SiPython, SiGnubash, SiGit, SiGithub, SiNeovim, SiEclipseide, SiPycharm, SiDjango, SiSqlite } from "react-icons/si";
 import "../../css/InfiniteIcons.css"
-import { FaJava } from "react-icons/fa";
-import { VscVscodeInsiders } from "react-icons/vsc";
-import { Link } from "react-router-dom";
-import { GrMysql } from "react-icons/gr";
+import type { IconItem, IconSection } from "../organisms/IconsSection";
 
-type IconItem = {
-    name: string;
-    icon: IconType;
-};
 
-const iconRows: IconItem[][] = [
-    // Languages
-    [
-        { name: "TypeScript", icon: SiTypescript },
-        { name: "Java", icon: FaJava },
-        { name: "Python", icon: SiPython },
-        { name: "JavaScript", icon: SiJavascript },
-        { name: "Bash", icon: SiGnubash },
-    ],
-    // FrameWorks
-    [
-        { name: "React", icon: SiReact },
-        { name: "MySQL", icon: GrMysql },
-        { name: "Django", icon: SiDjango },
-        { name: "SQLite", icon: SiSqlite },
-    ],
-    // Tools & IDEs
-    [
-        { name: "Git", icon: SiGit },
-        { name: "NeoVim", icon: SiNeovim },
-        { name: "GitHub", icon: SiGithub },
-        { name: "VSCode", icon: VscVscodeInsiders },
-        { name: "Eclipse", icon: SiEclipseide },
-        { name: "PyCharm", icon: SiPycharm },
-    ],
-];
 
 function renderRow(icons: IconItem[], row: number) {
     const rowClass = row % 2 === 0 ? 'even' : 'odd';
@@ -52,12 +17,14 @@ function renderRow(icons: IconItem[], row: number) {
     );
 }
 
-export default function InfiniteIcons() {
+export default function InfiniteIcons({ sections }: { sections: IconSection[] }) {
     return (
         <div className="bigContainer infiniteIcons-container">
             <h2>Languages, FrameWorks and Tools</h2>
             <div className="marquee-wrapper">
-                {iconRows.map((list: IconItem[], row: number) => renderRow(list, row))}
+                {sections.map((section: IconSection, sectionidx: number) =>
+                    renderRow(section.icons, sectionidx)
+                )}
             </div>
         </div>
 

@@ -7,7 +7,6 @@ import "../../css/SlideShow.css";
 import { FaJava } from "react-icons/fa";
 import { SiReact, SiJavascript, SiPython, SiDjango, SiSqlite, SiTypescript } from "react-icons/si";
 import { FaGithub } from "react-icons/fa6";
-import { redirect } from "react-router-dom";
 
 const projects = [
     {

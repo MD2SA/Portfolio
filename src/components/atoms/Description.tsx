@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "../../css/Description.css"
 
 export default function Description() {
@@ -15,7 +15,7 @@ export default function Description() {
                     I enjoy learning, experimenting, and turning ideas into real, valuable products.
                 </p>
             </div>
-            <Link to={"/academic"}>➥Checkout my academic progress</Link>
+            {/* <Link to={"/academic"}>➥Checkout my academic progress</Link> */}
         </div>
     );
 }
