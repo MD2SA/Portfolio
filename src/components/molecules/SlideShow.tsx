@@ -3,10 +3,10 @@ import DonkeyKong from "../../assets/images/DonkeyKong.png";
 import NOGS from "../../assets/images/NOGS.png";
 import Confidential from "../../assets/images/Confidential.png";
 import { MdOutlineNavigateBefore, MdOutlineNavigateNext } from "react-icons/md";
-import "../../css/SlideShow.css";
 import { FaJava } from "react-icons/fa";
 import { SiReact, SiJavascript, SiPython, SiDjango, SiSqlite, SiTypescript } from "react-icons/si";
 import { FaGithub } from "react-icons/fa6";
+import { BiLogoPostgresql } from "react-icons/bi";
 
 const projects = [
     {
@@ -41,7 +41,7 @@ const projects = [
             { name: "TypeScript", icon: SiTypescript },
             { name: "React", icon: SiReact },
             { name: "Django", icon: SiDjango },
-            { name: "SQLite", icon: SiSqlite },
+            { name: "PostgreSQL", icon: BiLogoPostgresql },
         ],
     }
 ];

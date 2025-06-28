@@ -1,4 +1,3 @@
-import "../../css/InfiniteIcons.css"
 import type { IconItem, IconSection } from "../organisms/IconsSection";
 
 

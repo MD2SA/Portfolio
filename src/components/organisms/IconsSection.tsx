@@ -6,6 +6,7 @@ import { FaJava } from "react-icons/fa6";
 import { SiDjango, SiEclipseide, SiGit, SiGithub, SiGnubash, SiJavascript, SiNeovim, SiPycharm, SiPython, SiReact, SiSqlite, SiTypescript } from "react-icons/si";
 import { VscVscodeInsiders } from "react-icons/vsc";
 import { GrMysql } from "react-icons/gr";
+import { BiLogoPostgresql } from "react-icons/bi";
 
 export type IconItem = {
     name: string;
@@ -36,6 +37,7 @@ const sections: IconSection[] = [
             { name: "MySQL", icon: GrMysql, },
             { name: "Django", icon: SiDjango, favorite: true, },
             { name: "SQLite", icon: SiSqlite, },
+            { name: "PostgreSQL", icon: BiLogoPostgresql, },
         ],
     },
     {

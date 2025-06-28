@@ -1,5 +1,3 @@
-import "../../css/TimeLine.css"
-
 const events: { title: string, time: string, complement?: string, description: string, url?: string }[] = [
     {
         title: "BSc in Computer Science and Business Management – ISCTE-IUL",

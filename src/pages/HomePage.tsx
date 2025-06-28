@@ -1,6 +1,4 @@
 import SlideShow from "../components/molecules/SlideShow";
-import "../css/HomePage.css";
-import "../css/ProfileCard.css";
 import Description from "../components/atoms/Description";
 import ProfileSection from "../components/organisms/ProfileSection";
 import TimeLine from "../components/molecules/TimeLine";

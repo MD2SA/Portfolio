@@ -1,6 +1,3 @@
-// import { Link } from "react-router-dom";
-import "../../css/Description.css"
-
 export default function Description() {
     return (
         <div className="description-container">
