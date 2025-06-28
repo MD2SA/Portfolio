@@ -41,7 +41,7 @@ export default function TimeLine() {
             {events && events.map((event, index) => (
                 <div className="timeline-item" key={`${index}-${event.title}`}>
                     <div className="timeline-dot"></div>
-                    <div className="timeline-content left">
+                    <div className="glass-card timeline-content">
                         <h3 className="timeline-title">{event.title}</h3>
                         <div className="timeline-more-container">
                             <small className="timeline-complement">{event.complement}</small>
