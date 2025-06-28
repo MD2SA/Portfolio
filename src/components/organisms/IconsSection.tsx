@@ -7,6 +7,7 @@ import { SiDjango, SiEclipseide, SiGit, SiGithub, SiGnubash, SiJavascript, SiNeo
 import { VscVscodeInsiders } from "react-icons/vsc";
 import { GrMysql } from "react-icons/gr";
 import { BiLogoPostgresql } from "react-icons/bi";
+import SectionIcons from "../molecules/SectionIcons";
 
 export type IconItem = {
     name: string;
@@ -65,6 +66,7 @@ export default function IconsSection() {
                     </div>
                 ) : (
                     <div className="icons-container">
+                        {/* <SectionIcons sections={sections}/> */}
                         <ToolsIcons sections={sections} />
                         <a onClick={() => setShowInfinite(true)}>➥Reduce</a>
                     </div>

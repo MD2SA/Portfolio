@@ -7,11 +7,19 @@
     animation: fadeIn 1s ease forwards 0.5s;
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 .homepage-wide {
     display: flex;
-    /* Adiciona flexbox */
     flex-direction: column;
-    /* Mantém os elementos empilhados verticalmente */
     align-items: center;
     flex-direction: column;
     overflow-y: auto;
@@ -25,137 +33,15 @@
 }
 
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
 .homepage-narrow {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* Enhanced Glassmorphism Scrollbar */
-::-webkit-scrollbar {
-    width: 8px;
-    /* Slightly wider for better visibility */
-}
-
-::-webkit-scrollbar-track {
-    background: rgba(20, 20, 20, 0.6);
-    /* Darker track for more contrast */
-    border-radius: 12px;
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(8px);
-}
-
-::-webkit-scrollbar-thumb {
-    background: rgba(120, 120, 120, 0.7);
-    /* Brighter thumb */
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    /* Subtle border */
-    background-clip: padding-box;
-    min-height: 40px;
-    /* Taller minimum height */
-    transition: all 0.4s ease-out;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: rgba(160, 160, 160, 0.8);
-    /* More visible hover state */
-    transform: scaleX(1.1);
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
-    /* Soft glow */
-}
-
-/* Enhanced glow animation */
-@keyframes scrollbarGlow {
-    0% {
-        box-shadow: 0 0 0 rgba(180, 180, 180, 0);
-    }
-
-    50% {
-        box-shadow: 0 0 10px rgba(180, 180, 180, 0.4);
-    }
-
-    100% {
-        box-shadow: 0 0 0 rgba(180, 180, 180, 0);
-    }
-}
-
-::-webkit-scrollbar-thumb:active {
-    background: rgba(200, 200, 200, 0.9);
-    animation: scrollbarGlow 1s ease;
-}
 
 @media (max-width: 840px) {
     .homepage-narrow {
         display: none;
-    }
-}
-
-
-
-.glass-card {
-    padding: 1.5rem;
-    background-color: rgba(30, 30, 30, 0.7);
-    border-radius: 16px;
-    border: 1px solid rgba(70, 70, 70, 0.5);
-    box-shadow:
-        0 4px 20px rgba(0, 0, 0, 0.3),
-        inset 0 1px 2px rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(4px);
-    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    position: relative;
-    overflow: hidden;
-    background-image:
-        radial-gradient(circle at 20% 30%, rgba(60, 60, 60, 0.3) 0%, transparent 30%),
-        radial-gradient(circle at 80% 70%, rgba(60, 60, 60, 0.3) 0%, transparent 30%);
-    background-size: 200% 200%;
-    animation: subtleMove 20s ease infinite;
-}
-
-.glass-card:hover {
-    transform: translateY(-2px);
-    box-shadow:
-        0 8px 30px rgba(0, 0, 0, 0.4),
-        inset 0 2px 3px rgba(255, 255, 255, 0.1);
-    border-color: rgba(90, 90, 90, 0.7);
-}
-
-.glass-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0.02) 50%,
-            rgba(255, 255, 255, 0) 100%);
-    pointer-events: none;
-    z-index: 1;
-}
-
-
-@keyframes subtleMove {
-    0% {
-        background-position: 0% 0%;
-    }
-
-    50% {
-        background-position: 100% 100%;
-    }
-
-    100% {
-        background-position: 0% 0%;
     }
 }

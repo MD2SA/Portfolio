@@ -1,4 +1,3 @@
-/* styles.css */
 .timeline {
     position: relative;
     margin: 0 auto;
@@ -55,16 +54,12 @@
     border-radius: 50%;
     top: 24px;
     z-index: 2;
-    box-shadow:
-        0 0 0 4px rgba(30, 30, 30, 0.5),
-        0 2px 5px rgba(0, 0, 0, 0.3);
     transition: all 0.8s ease;
 }
 
 .timeline-item:hover .timeline-dot {
     transform: scale(1.2);
     background-color: #555555;
-    /* Hover mais neutro */
     box-shadow:
         0 0 0 4px rgba(30, 30, 30, 0.5),
         0 2px 10px rgba(85, 85, 85, 0.4);
@@ -92,7 +87,6 @@
     font-style: italic;
     font-weight: 500;
     letter-spacing: 0.05em;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -107,7 +101,6 @@
     font-size: 1.3rem;
     margin-bottom: 0px;
     color: #f0f0f0;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
     position: relative;
     padding-bottom: 0.5rem;
 }
@@ -127,7 +120,6 @@
     line-height: 1.6;
     color: #e0e0e0;
     margin: 0;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 .timeline-item:nth-child(odd) .timeline-content {
@@ -139,7 +131,10 @@
 }
 
 
-/* Responsive Design */
+.timeline-link {
+    padding: 0;
+}
+
 @media screen and (max-width: 600px) {
     .timeline-line {
         left: 30px;
@@ -167,8 +162,4 @@
         margin-left: 0 !important;
         margin-right: 0 !important;
     }
-}
-
-.timeline-link {
-    padding: 0;
 }

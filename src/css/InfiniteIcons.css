@@ -1,15 +1,11 @@
 .icons-container {
     max-width: 600px;
     width: 80%;
-
 }
 
-/* .infiniteIcons-container { */
-/* } */
 
 .marquee-wrapper {
     overflow: hidden;
-    /* max-width: max(450px, 50vw); */
     border-top: 1px solid #4a4a4a;
     border-bottom: 1px solid #4a4a4a;
 }
@@ -17,7 +13,6 @@
 .marquee-track {
     display: flex;
     gap: 1.5rem;
-    /* Consistent with slideshow spacing */
     animation: scroll 500s linear infinite;
     width: max-content;
 }
@@ -86,7 +81,3 @@
     flex-direction: column;
     border-top: 1px solid #4a4a4a;
 }
-
-/* .marquee-wrapper:hover .marquee-track { */
-/*     animation-play-state: paused; */
-/* } */
