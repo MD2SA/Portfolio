@@ -13,17 +13,17 @@ export default function SectionIcons({ sections }: { sections: IconSection[] }) 
     const goForward = () => setCur((prev) => (prev + 1) % sections.length);
 
     return (
-        <div>
+        <div className="icon-section-container">
             <div>
                 <h2>{section.name}</h2>
-                <div className="marquee-wrapper section-container">
+                <div className="icon-grid-container">
                     {section.icons.map((item, itemidx) => {
                         const { name, icon: Icon, favorite } = item;
                         return (
                             <div key={`icon-${itemidx}`} className="container-techIcon">
                                 <Icon />
                                 <span>{name}</span>
-                                {favorite && <BiStar />}
+                                {favorite && <BiStar className="favorite-star" />}
                             </div>
                         );
                     })}

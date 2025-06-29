@@ -70,6 +70,12 @@
     cursor: pointer;
 }
 
+.container-techIcon svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    min-width: 1.5rem;
+}
+
 .tools-container {
     display: flex;
     flex-direction: row;
@@ -82,13 +88,37 @@
     border-top: 1px solid #4a4a4a;
 }
 
-.section-container {
+
+
+.icon-section-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.icon-grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1.5rem;
+    border-bottom: 1px solid #4a4a4a;
+    border-top: 1px solid #4a4a4a;
 }
 
 .section-icon-navigation {
     display: flex;
     justify-content: center;
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .icon-grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 1rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .icon-grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
 }
