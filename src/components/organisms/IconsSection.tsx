@@ -8,6 +8,7 @@ import { VscVscodeInsiders } from "react-icons/vsc";
 import { GrMysql } from "react-icons/gr";
 import { BiLogoPostgresql } from "react-icons/bi";
 import SectionIcons from "../molecules/SectionIcons";
+import { useMediaQuery } from "../../hooks/useMediaQuery";
 
 export type IconItem = {
     name: string;
@@ -56,22 +57,18 @@ const sections: IconSection[] = [
 
 export default function IconsSection() {
     const [showInfinite, setShowInfinite] = useState(true);
-    return (
-        <>
-            {showInfinite ?
-                (
-                    <div className="icons-container">
-                        <InfiniteIcons sections={sections} />
-                        <a onClick={() => setShowInfinite(!showInfinite)}>Change view</a>
-                    </div>
-                ) : (
-                    <div className="icons-container">
-                        <SectionIcons sections={sections} />
-                        <a onClick={() => setShowInfinite(!showInfinite)}>Change view</a>
-                    </div>
-                )
-            }
+    const isMobile = useMediaQuery('(max-width:840px)');
 
-        </>
+    const showSectionIcons = isMobile || !showInfinite;
+
+    return (
+        <div className="icons-container">
+            {showSectionIcons ? <SectionIcons sections={sections} /> : <InfiniteIcons sections={sections} />}
+            {!isMobile && (
+                <a onClick={() => setShowInfinite(!showInfinite)}>
+                    {showInfinite ? 'Show Grid View' : 'Show Infinite Scroll'}
+                </a>
+            )}
+        </div>
     );
 }
