@@ -27,7 +27,6 @@
     padding: 4rem 1.5rem 20vh;
     gap: 4rem;
 
-    transition: scroll-behavior 2s ease;
     scroll-behavior: smooth;
     overscroll-behavior: contain;
 }

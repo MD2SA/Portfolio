@@ -41,6 +41,13 @@ a:hover {
     transform: translateY(-2px);
 }
 
+/*necessary to avoid bouncing titles*/
+h2 {
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+}
+
 ::-webkit-scrollbar {
     width: 8px;
 }

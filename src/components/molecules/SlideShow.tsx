@@ -56,39 +56,43 @@ export default function SlideShow() {
     const currentProject = projects[currentIndex];
 
     return (
-        <div className="big-container slideshow-container">
-            <h2>Projects</h2>
-            {currentProject.github ?
-                (
-                    <FaGithub
-                        onClick={() => window.open(currentProject.github, "_blank")}
-                        className="glass-base slideshow-details-button"
-                    />
-                ) : (
-                    null
-                )
-            }
+        <div className="slideshow-container">
             <div>
-                <div className="slideshow-image-wrapper">
-                    <img
-                        src={currentProject.img}
-                        className="slideshow-image"
-                        alt={currentProject.title}
-                    />
-                    <div className={`slideshow-icons-container ${showDetail ? "visible" : ""}`}>
-                        {
-                            currentProject.technologies.map((tech, index) => {
-                                const { icon: Icon } = tech;
-                                return (
-                                    <div key={`tech-${index}`} className="slideshow-icon">
-                                        <Icon />
-                                    </div>
-                                );
-                            })
-                        }
-                    </div>
-                    <div className={`slideshow-description ${showDetail ? "visible" : ""}`}>
-                        <p>{currentProject.description}</p>
+                <div className="slideshow-top-container">
+                    <h2>Projects</h2>
+                    {currentProject.github ?
+                        (
+                            <FaGithub
+                                onClick={() => window.open(currentProject.github, "_blank")}
+                                className="glass-base slideshow-details-button"
+                            />
+                        ) : (
+                            null
+                        )
+                    }
+                </div>
+                <div>
+                    <div className="slideshow-image-wrapper">
+                        <img
+                            src={currentProject.img}
+                            className="slideshow-image"
+                            alt={currentProject.title}
+                        />
+                        <div className={`slideshow-icons-container ${showDetail ? "visible" : ""}`}>
+                            {
+                                currentProject.technologies.map((tech, index) => {
+                                    const { icon: Icon } = tech;
+                                    return (
+                                        <div key={`tech-${index}`} className="slideshow-icon">
+                                            <Icon />
+                                        </div>
+                                    );
+                                })
+                            }
+                        </div>
+                        <div className={`slideshow-description ${showDetail ? "visible" : ""}`}>
+                            <p>{currentProject.description}</p>
+                        </div>
                     </div>
                 </div>
             </div>
