@@ -48,19 +48,12 @@ const projects = [
 
 export default function SlideShow() {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [isHovering, setIsHovering] = useState(false);
     const [showDetail, setShowDetail] = useState(false);
 
     const goBack = () => setCurrentIndex((prev) => (prev - 1 + projects.length) % projects.length);
     const goForward = () => setCurrentIndex((prev) => (prev + 1) % projects.length);
 
     const currentProject = projects[currentIndex];
-
-    const handleDetailClick = () => {
-        //for phone
-        if (isHovering && !showDetail) setIsHovering(false);
-        else setShowDetail(!showDetail)
-    }
 
     return (
         <div className="big-container slideshow-container">
@@ -75,17 +68,14 @@ export default function SlideShow() {
                     null
                 )
             }
-            <div
-                onMouseEnter={() => setIsHovering(true)}
-                onMouseLeave={() => setIsHovering(false)}
-            >
+            <div>
                 <div className="slideshow-image-wrapper">
                     <img
                         src={currentProject.img}
                         className="slideshow-image"
                         alt={currentProject.title}
                     />
-                    <div className={`slideshow-icons-container ${showDetail || isHovering ? "visible" : ""}`}>
+                    <div className={`slideshow-icons-container ${showDetail ? "visible" : ""}`}>
                         {
                             currentProject.technologies.map((tech, index) => {
                                 const { icon: Icon } = tech;
@@ -97,14 +87,14 @@ export default function SlideShow() {
                             })
                         }
                     </div>
-                    <div className={`slideshow-description ${showDetail || isHovering ? "visible" : ""}`}>
+                    <div className={`slideshow-description ${showDetail ? "visible" : ""}`}>
                         <p>{currentProject.description}</p>
                     </div>
                 </div>
             </div>
             <div className="slideshow-navigation">
                 <MdOutlineNavigateBefore onClick={goBack} className="glass-base nav-icon" />
-                <button onClick={handleDetailClick} className="glass-base see-more-btn">See {!showDetail ? "More" : "Less"}</button>
+                <button onClick={() => setShowDetail(!showDetail)} className="glass-base see-more-btn">See {!showDetail ? "More" : "Less"}</button>
                 <MdOutlineNavigateNext onClick={goForward} className="glass-base nav-icon" />
             </div>
         </div>

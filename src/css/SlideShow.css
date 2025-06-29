@@ -59,6 +59,13 @@
     backdrop-filter: blur(4px);
 }
 
+.slideshow-image-wrapper:hover .slideshow-icons-container,
+.slideshow-image-wrapper:hover .slideshow-description,
+.slideshow-icons-container.visible,
+.slideshow-description.visible {
+    transform: translateY(0);
+}
+
 .slideshow-image {
     width: 100%;
     height: 100%;
@@ -83,10 +90,6 @@
     transition: transform 0.5s ease;
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
-}
-
-.slideshow-icons-container.visible {
-    transform: translateY(0);
 }
 
 .slideshow-icon {
@@ -115,10 +118,6 @@
     transition: transform 0.5s ease;
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
-}
-
-.slideshow-description.visible {
-    transform: translateY(0);
 }
 
 .slideshow-navigation {

@@ -133,7 +133,7 @@
     font-size: 1.1rem;
     color: rgba(255, 255, 255, 0.8);
     margin-top: 0.5rem;
-    letter-spacing: 1px;
+    letter-spacing: 0.8px;
 }
 
 .name-heading:hover small {
