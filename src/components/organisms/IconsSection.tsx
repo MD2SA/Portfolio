@@ -1,12 +1,13 @@
 import { useState } from "react";
 import InfiniteIcons from "../molecules/InfiniteIcons";
-import ToolsIcons from "../molecules/ToolsIcons";
+// import ToolsIcons from "../molecules/ToolsIcons";
 import type { IconType } from "react-icons";
 import { FaJava } from "react-icons/fa6";
 import { SiDjango, SiEclipseide, SiGit, SiGithub, SiGnubash, SiJavascript, SiNeovim, SiPycharm, SiPython, SiReact, SiSqlite, SiTypescript } from "react-icons/si";
 import { VscVscodeInsiders } from "react-icons/vsc";
 import { GrMysql } from "react-icons/gr";
 import { BiLogoPostgresql } from "react-icons/bi";
+import SectionIcons from "../molecules/SectionIcons";
 
 export type IconItem = {
     name: string;
@@ -31,7 +32,7 @@ const sections: IconSection[] = [
         ],
     },
     {
-        name: "Frameworks",
+        name: "Frameworks & Databases",
         icons: [
             { name: "React", icon: SiReact, favorite: true, },
             { name: "MySQL", icon: GrMysql, },
@@ -61,13 +62,12 @@ export default function IconsSection() {
                 (
                     <div className="icons-container">
                         <InfiniteIcons sections={sections} />
-                        <a onClick={() => setShowInfinite(false)}>➥Expand</a>
+                        <a onClick={() => setShowInfinite(!showInfinite)}>Change view</a>
                     </div>
                 ) : (
                     <div className="icons-container">
-                        {/* <SectionIcons sections={sections}/> */}
-                        <ToolsIcons sections={sections} />
-                        <a onClick={() => setShowInfinite(true)}>➥Reduce</a>
+                        <SectionIcons sections={sections} />
+                        <a onClick={() => setShowInfinite(!showInfinite)}>Change view</a>
                     </div>
                 )
             }

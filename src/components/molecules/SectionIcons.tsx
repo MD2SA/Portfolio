@@ -16,7 +16,7 @@ export default function SectionIcons({ sections }: { sections: IconSection[] }) 
         <div>
             <div>
                 <h2>{section.name}</h2>
-                <div className="icon-section">
+                <div className="marquee-wrapper section-container">
                     {section.icons.map((item, itemidx) => {
                         const { name, icon: Icon, favorite } = item;
                         return (
@@ -29,8 +29,10 @@ export default function SectionIcons({ sections }: { sections: IconSection[] }) 
                     })}
                 </div>
             </div>
-            <MdOutlineNavigateBefore onClick={goBack} className="nav-icon" />
-            <MdOutlineNavigateNext onClick={goForward} className="nav-icon" />
+            <div className="section-icon-navigation">
+                <MdOutlineNavigateBefore onClick={goBack} className="nav-icon" />
+                <MdOutlineNavigateNext onClick={goForward} className="nav-icon" />
+            </div>
         </div>
     );
 }

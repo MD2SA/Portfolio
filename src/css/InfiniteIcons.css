@@ -81,3 +81,14 @@
     flex-direction: column;
     border-top: 1px solid #4a4a4a;
 }
+
+.section-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+}
+
+.section-icon-navigation {
+    display: flex;
+    justify-content: center;
+}

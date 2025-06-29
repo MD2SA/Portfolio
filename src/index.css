@@ -39,13 +39,14 @@ a {
 a:hover {
     color: white;
     transform: translateY(-2px);
+    cursor: pointer;
 }
 
 /*necessary to avoid bouncing titles*/
 h2 {
-  position: relative;
-  z-index: 1;
-  background-color: transparent;
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
 }
 
 ::-webkit-scrollbar {
