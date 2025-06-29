@@ -1,3 +1,5 @@
+import "./index.css"
+import "./App.css"
 import "./css/HomePage.css";
 import "./css/ProfileCard.css";
 import "./css/Description.css";

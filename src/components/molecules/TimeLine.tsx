@@ -47,7 +47,7 @@ export default function TimeLine() {
                         </div>
                         <p className="timeline-text">
                             {event.description}
-                            {event.url && <> - <a href={event.url} target="_blank" className="timeline-link">more</a></> }
+                            {event.url && <> - <a href={event.url} target="_blank" >more</a></> }
                         </p>
                     </div>
                 </div>
