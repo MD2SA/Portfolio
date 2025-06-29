@@ -5,15 +5,15 @@ import portugal from "../../assets/images/portugal-flag.svg";
 export default function Languages() {
     return (
         <div className="languages-container">
-            <div className="item language">
+            <div className="glass-base item language">
                 <img src={portugal} alt="Portugal flag" className="language-flag" />
                 <p className="language-level" >Native</p>
             </div>
-            <div className="item language">
+            <div className="glass-base item language">
                 <img src={uk} alt="UK flag" className="language-flag" />
                 <p className="language-level" >Fluent</p>
             </div>
-            <div className="item language">
+            <div className="glass-base item language">
                 <img src={spain} alt="Spain flag" className="language-flag" />
                 <p className="language-level" data-level="Fluent">Basic</p>
             </div>

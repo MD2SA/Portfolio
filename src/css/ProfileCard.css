@@ -91,22 +91,23 @@
     flex-direction: column;
     max-width: 420px;
     padding: 1rem;
+    gap: 1rem;
 }
 
 .contact-item {
-    justify-content: flex-start;
+    display: flex;
+    align-items: center;
     gap: 1rem;
     padding: 1.25rem 1.5rem;
     color: #f0f0f0;
-    text-align: left;
+
+    cursor: pointer;
 }
 
 .contact-item svg {
     width: 1.25rem;
     height: 1.25rem;
     color: #ffffff;
-    flex-shrink: 0;
-    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.2));
 }
 
 
@@ -120,11 +121,14 @@
 
 
 .language {
-    flex-direction: row;
+    display: flex;
+    align-items: center;
     gap: 0.75rem;
     width: 100px;
     position: relative;
     padding: 10px 10px;
+
+    cursor: pointer;
 }
 
 .language-flag {
@@ -143,7 +147,6 @@
     font-size: 0.85rem;
     color: #f0f0f0;
     letter-spacing: 0.5px;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 600px) {
