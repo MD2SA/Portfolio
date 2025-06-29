@@ -103,9 +103,9 @@ export default function SlideShow() {
                 </div>
             </div>
             <div className="slideshow-navigation">
-                <MdOutlineNavigateBefore onClick={goBack} className="nav-icon" />
-                <button onClick={handleDetailClick} className="see-more-btn">See {!showDetail ? "More" : "Less"}</button>
-                <MdOutlineNavigateNext onClick={goForward} className="nav-icon" />
+                <MdOutlineNavigateBefore onClick={goBack} className="glass-base nav-icon" />
+                <button onClick={handleDetailClick} className="glass-base see-more-btn">See {!showDetail ? "More" : "Less"}</button>
+                <MdOutlineNavigateNext onClick={goForward} className="glass-base nav-icon" />
             </div>
         </div>
     );
