@@ -62,7 +62,7 @@ export default function SlideShow() {
                 (
                     <FaGithub
                         onClick={() => window.open(currentProject.github, "_blank")}
-                        className="slideshow-details-button"
+                        className="glass-base slideshow-details-button"
                     />
                 ) : (
                     null
