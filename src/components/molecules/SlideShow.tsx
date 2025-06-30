@@ -1,17 +1,21 @@
 import { useState } from "react";
 import { MdOutlineNavigateBefore, MdOutlineNavigateNext } from "react-icons/md";
-import { FaGithub } from "react-icons/fa6";
+import { FaGithub, FaLock, FaLockOpen } from "react-icons/fa6";
 
 import { projects } from "../../assets/constants";
+import { useMediaQuery } from "../../hooks/useMediaQuery";
 
 export default function SlideShow() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [showDetail, setShowDetail] = useState(false);
+    const [lockDetail, setLockDetail] = useState(false);
 
     const goBack = () => setCurrentIndex((prev) => (prev - 1 + projects.length) % projects.length);
     const goForward = () => setCurrentIndex((prev) => (prev + 1) % projects.length);
 
     const currentProject = projects[currentIndex];
+
+    const isTouchDevice = useMediaQuery("(hover: none)");
 
     return (
         <div className="slideshow-container">
@@ -30,13 +34,21 @@ export default function SlideShow() {
                     }
                 </div>
                 <div>
-                    <div className="slideshow-image-wrapper">
+                    <div
+                        className="slideshow-image-wrapper"
+                        onMouseOver={!isTouchDevice ? () => setShowDetail(true) : undefined}
+                        onMouseLeave={!isTouchDevice ? () => setShowDetail(false) : undefined}
+                        onClick={() => {
+                            setLockDetail(!lockDetail)
+                            setShowDetail(false);
+                        }}
+                    >
                         <img
                             src={currentProject.img}
                             className="slideshow-image"
                             alt={currentProject.title}
                         />
-                        <div className={`slideshow-icons-container ${showDetail ? "visible" : ""}`}>
+                        <div className={`slideshow-icons-container ${showDetail || lockDetail ? "visible" : ""}`}>
                             {
                                 currentProject.technologies.map((tech, index) => {
                                     const { icon: Icon } = tech;
@@ -48,7 +60,7 @@ export default function SlideShow() {
                                 })
                             }
                         </div>
-                        <div className={`slideshow-description ${showDetail ? "visible" : ""}`}>
+                        <div className={`slideshow-description ${showDetail || lockDetail ? "visible" : ""}`}>
                             <p>{currentProject.description}</p>
                         </div>
                     </div>
@@ -56,7 +68,7 @@ export default function SlideShow() {
             </div>
             <div className="slideshow-navigation">
                 <MdOutlineNavigateBefore onClick={goBack} className="glass-base nav-icon" />
-                <button onClick={() => setShowDetail(!showDetail)} className="glass-base see-more-btn">See {!showDetail ? "More" : "Less"}</button>
+                <button onClick={() => setLockDetail(!lockDetail)} className="glass-base see-more-btn">{lockDetail ? <FaLock /> : <FaLockOpen />}</button>
                 <MdOutlineNavigateNext onClick={goForward} className="glass-base nav-icon" />
             </div>
         </div>

@@ -34,8 +34,6 @@
     backdrop-filter: blur(4px);
 }
 
-.slideshow-image-wrapper:hover .slideshow-icons-container,
-.slideshow-image-wrapper:hover .slideshow-description,
 .slideshow-icons-container.visible,
 .slideshow-description.visible {
     transform: translateY(0);

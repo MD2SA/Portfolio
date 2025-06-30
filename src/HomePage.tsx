@@ -1,9 +1,9 @@
-import SlideShow from "../components/molecules/SlideShow";
-import Description from "../components/atoms/Description";
-import ProfileSection from "../components/organisms/ProfileSection";
-import TimeLine from "../components/molecules/TimeLine";
 import { useEffect, useRef } from "react";
-import IconsSection from "../components/organisms/IconsSection";
+import SlideShow from "./components/molecules/SlideShow";
+import Description from "./components/atoms/Description";
+import ProfileSection from "./components/organisms/ProfileSection";
+import TimeLine from "./components/molecules/TimeLine";
+import IconsSection from "./components/organisms/IconsSection";
 
 
 export default function HomePage() {
