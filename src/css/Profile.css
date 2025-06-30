@@ -194,10 +194,6 @@
         flex-direction: column;
     }
 
-    .language {
-        padding: 0.75rem 1rem;
-    }
-
     .contact-item {
         padding: 0.75rem 1rem;
     }
@@ -212,14 +208,15 @@
     }
 
     .language-flag {
-        width: 28px;
-        height: 28px;
+        width: 26px;
+        height: 26px;
     }
 
     .language-level {
         font-size: 0.8rem;
     }
 }
+
 
 @media (max-height: 770px) and (min-width: 841px) {
     .profile-icons {
@@ -232,5 +229,11 @@
 
     .language {
         height: 2.75rem;
+    }
+}
+
+@media (max-height: 770px) and (min-width: 841px) and (max-width: 1225px) {
+    .language {
+        height: 2.5rem;
     }
 }

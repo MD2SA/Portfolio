@@ -19,15 +19,6 @@ import portugal from "./images/portugal-flag.svg";
 
 export const projects = [
     {
-        title: "DonkeyKong",
-        img: DonkeyKong,
-        description: "This is a 2D game inspired by the classic Donkey Kong, developed entirely in Java. The project was originally created as part of the Object-Oriented Programming course, and is currently taking updates for new features",
-        github: "https://github.com/MD2SA/DonkeyKong",
-        technologies: [
-            { name: "Java", icon: FaJava },
-        ],
-    },
-    {
         title: "NOGS",
         img: NOGS,
         description: "NOGS is a full-stack typing game platform where users can improve their typing speed, compete against random opponents, and connect with friends or join teams.",
@@ -41,9 +32,18 @@ export const projects = [
         ],
     },
     {
+        title: "DonkeyKong",
+        img: DonkeyKong,
+        description: "This is a 2D game inspired by the classic Donkey Kong, developed entirely in Java. The project was originally created as part of the Object-Oriented Programming course, and is currently taking updates for new features",
+        github: "https://github.com/MD2SA/DonkeyKong",
+        technologies: [
+            { name: "Java", icon: FaJava },
+        ],
+    },
+    {
         title: "Confidential",
         img: Confidential,
-        description: "I am currently developing a full-stack mobile app. For this project, I had to scrape multiple files from the internet to populate the information database. Aside from that, the details are confidential.",
+        description: "I am currently developing a full-stack mobile app. For this project, I had to scrape multiple forms of content from the internet to populate the information database. Aside from that, the details are confidential.",
         github: undefined,
         technologies: [
             { name: "Python", icon: SiPython },
