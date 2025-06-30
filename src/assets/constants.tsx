@@ -8,6 +8,8 @@ import { SiDjango, SiEclipseide, SiGit, SiGithub, SiGnubash, SiJavascript, SiNeo
 import { BiLogoPostgresql } from "react-icons/bi";
 import { VscVscodeInsiders } from "react-icons/vsc";
 import { GrMysql } from "react-icons/gr";
+import { MdOutlineMailOutline } from "react-icons/md";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 import uk from "./images/uk-flag.svg";
 import spain from "./images/spain-flag.svg";
@@ -152,3 +154,30 @@ export const description = {
 `,
 
 }
+
+const email = "albuquerque2158@gmail.com";
+const subject = encodeURIComponent("Hello from your website");
+const body = encodeURIComponent("Hello Manuel,\n\nI came across your website and wanted to get in touch with you.\n\nBest regards,\n[Your Name]");
+
+const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`;
+
+export const contacts = [
+    {
+        "name": "Manuel Albuquerque",
+        "url": "https://www.linkedin.com/in/manuel-albuquerque-/",
+        "icon": FaLinkedin,
+        "target": "_blank",
+    },
+    {
+        "name": "albuquerque2158@gmail.com",
+        "url": mailtoLink,
+        "icon": MdOutlineMailOutline,
+        "target": "_self",
+    },
+    {
+        "name": "MD2SA",
+        "url": "https://github.com/MD2SA",
+        "icon": FaGithub,
+        "target": "_blank",
+    }
+]

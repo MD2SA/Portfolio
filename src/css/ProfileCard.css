@@ -220,3 +220,17 @@
         font-size: 0.8rem;
     }
 }
+
+@media (max-height: 770px) and (min-width: 841px) {
+    .profile-icons {
+        flex-direction: row;
+    }
+
+    .languages-container {
+        flex-direction: column;
+    }
+
+    .language {
+        height: 2.75rem;
+    }
+}

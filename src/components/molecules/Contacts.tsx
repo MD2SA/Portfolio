@@ -1,20 +1,16 @@
-import { MdOutlineMailOutline } from "react-icons/md";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { contacts } from "../../assets/constants";
 import ContactInfo from "../atoms/ContactInfo";
 
 
 export default function Contacts() {
+
     return (
         <div className="contacts-container">
-            <a href="https://www.linkedin.com/in/manuel-albuquerque-/" target="_blank">
-                <ContactInfo contact="Manuel Albuquerque" Icon={FaLinkedin} />
-            </a>
-            <a>
-                <ContactInfo contact="albuquerque2158@gmail.com" Icon={MdOutlineMailOutline} />
-            </a>
-            <a href="https://github.com/MD2SA" target="_blank">
-                <ContactInfo contact="MD2SA" Icon={FaGithub} />
-            </a>
+            {contacts?.map((contact, idx) => (
+                <a href={contact.url} key={`contact-${idx}`} target={contact.target}>
+                    <ContactInfo contact={contact.name} Icon={contact.icon} />
+                </a>
+            ))}
         </div>
     );
 }

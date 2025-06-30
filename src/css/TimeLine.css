@@ -132,7 +132,7 @@
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px), screen and (min-width: 841px) and (max-width: 1000px) {
     .timeline-line {
         left: 30px;
         transform: none;
@@ -159,4 +159,9 @@
         margin-left: 0 !important;
         margin-right: 0 !important;
     }
+
+    .timeline-item:nth-child(odd) .timeline-more-container {
+        flex-direction: row-reverse;
+    }
 }
+
