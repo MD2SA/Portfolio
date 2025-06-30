@@ -1,4 +1,4 @@
-.homepage-container {
+.app-container {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -18,7 +18,7 @@
     }
 }
 
-.homepage-wide {
+.app-wide {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,7 +33,7 @@
 }
 
 
-.homepage-narrow {
+.app-narrow {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,12 +44,12 @@
 
 
 @media (max-width: 840px) {
-    .homepage-container {
+    .app-container {
         flex-direction: column;
         min-height: auto;
     }
 
-    .homepage-wide {
+    .app-wide {
         overflow-y: visible;
         height: auto;
         padding: 2rem 1.5rem;

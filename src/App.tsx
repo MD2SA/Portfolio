@@ -26,11 +26,11 @@ export default function HomePage() {
     }, []);
 
     return (
-        <div className="homepage-container">
-            <div className="homepage-narrow">
+        <div className="app-container">
+            <div className="app-narrow">
                 <ProfileSection />
             </div>
-            <div className="homepage-wide" ref={wideContainerRef}>
+            <div className="app-wide" ref={wideContainerRef}>
                 <Description />
                 <Projects />
                 <Tools />
