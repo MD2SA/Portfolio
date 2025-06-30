@@ -1,16 +1,36 @@
-.avatarContainer {
-    position: relative;
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
+:root {
+    --avatar-size: var(--avatar-full-size);
+    --avatar-full-size: 250px;
+    --avatar-small-size: 150px;
+}
+
+.profile-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
+.profile-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.avatarContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    border-radius: 50%;
+    border-width: 2px;
+}
+
 .avatarImage {
-    width: 242px;
-    height: 242px;
+    width: calc(var(--avatar-size) - 8px);
+    height: calc(var(--avatar-size) - 8px);
     object-fit: cover;
     border-radius: 50%;
     position: relative;
@@ -139,4 +159,64 @@
 .name-heading:hover small {
     color: rgba(255, 255, 255, 0.95);
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 840px) {
+    :root {
+        --avatar-size: var(--avatar-small-size);
+    }
+
+    .profile-container {
+        display: grid;
+        grid-template-areas:
+            "avatar icons"
+            "name name";
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .avatarContainer {
+        grid-area: avatar;
+    }
+
+    .profile-icons {
+        grid-area: icons;
+        flex-direction: row;
+    }
+
+    .name-heading {
+        grid-area: name;
+    }
+
+    .languages-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .language {
+        padding: 0.75rem 1rem;
+    }
+
+    .contact-item {
+        padding: 0.75rem 1rem;
+    }
+
+    .languages-container {
+        justify-content: flex-start;
+    }
+
+    .language {
+        width: auto;
+        padding: 0.5rem 0.75rem;
+    }
+
+    .language-flag {
+        width: 28px;
+        height: 28px;
+    }
+
+    .language-level {
+        font-size: 0.8rem;
+    }
 }

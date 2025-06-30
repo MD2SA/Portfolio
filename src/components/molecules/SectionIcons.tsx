@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BiStar } from "react-icons/bi";
-import type { IconSection } from "../organisms/IconsSection";
 import { MdOutlineNavigateBefore, MdOutlineNavigateNext } from "react-icons/md";
+import type { IconItem } from "../../assets/constants";
 
 export default function SectionIcons({ sections }: { sections: IconSection[] }) {
 
@@ -17,7 +17,7 @@ export default function SectionIcons({ sections }: { sections: IconSection[] }) 
             <div>
                 <h2>{section.name}</h2>
                 <div className="icon-grid-container">
-                    {section.icons.map((item, itemidx) => {
+                    {section.icons.map((item: IconItem, itemidx: number) => {
                         const { name, icon: Icon, favorite } = item;
                         return (
                             <div key={`icon-${itemidx}`} className="container-techIcon">

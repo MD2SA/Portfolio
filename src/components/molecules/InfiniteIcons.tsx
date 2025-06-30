@@ -1,4 +1,4 @@
-import type { IconItem, IconSection } from "../organisms/IconsSection";
+import type { IconItem, IconSection } from "../../assets/constants";
 
 
 
@@ -19,7 +19,7 @@ function renderRow(icons: IconItem[], row: number) {
 export default function InfiniteIcons({ sections }: { sections: IconSection[] }) {
     return (
         <div className="infiniteIcons-container">
-            <h2>Languages, FrameWorks and Tools</h2>
+            <h2>Languages, FrameWorks & Tools</h2>
             <div className="marquee-wrapper">
                 {sections.map((section: IconSection, sectionidx: number) =>
                     renderRow(section.icons, sectionidx)

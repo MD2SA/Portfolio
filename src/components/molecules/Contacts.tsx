@@ -9,7 +9,7 @@ export default function Contacts() {
             <a href="https://www.linkedin.com/in/manuel-albuquerque-/" target="_blank">
                 <ContactInfo contact="Manuel Albuquerque" Icon={FaLinkedin} />
             </a>
-            <a onClick={() => console.log("EMAIL")}>
+            <a>
                 <ContactInfo contact="albuquerque2158@gmail.com" Icon={MdOutlineMailOutline} />
             </a>
             <a href="https://github.com/MD2SA" target="_blank">

@@ -1,22 +1,14 @@
-import uk from "../../assets/images/uk-flag.svg";
-import spain from "../../assets/images/spain-flag.svg";
-import portugal from "../../assets/images/portugal-flag.svg";
+import { languages } from "../../assets/constants";
 
 export default function Languages() {
     return (
         <div className="languages-container">
-            <div className="glass-base item language">
-                <img src={portugal} alt="Portugal flag" className="language-flag" />
-                <p className="language-level" >Native</p>
-            </div>
-            <div className="glass-base item language">
-                <img src={uk} alt="UK flag" className="language-flag" />
-                <p className="language-level" >Fluent</p>
-            </div>
-            <div className="glass-base item language">
-                <img src={spain} alt="Spain flag" className="language-flag" />
-                <p className="language-level" data-level="Fluent">Basic</p>
-            </div>
+            {languages?.map((lang) => (
+                <div className="glass-base language" key={lang.code}>
+                    <img src={lang.src} className="language-flag" />
+                    <p className="language-level" >{lang.level}</p>
+                </div>
+            ))}
         </div>
     );
 }

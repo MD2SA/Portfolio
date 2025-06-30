@@ -6,14 +6,16 @@ import Languages from "../molecules/Languages";
 
 export default function ProfileSection() {
     return (
-        <>
+        <div className="profile-container">
             <Avatar imageUrl={avatar} />
             <h1 className="name-heading">
                 Manuel Albuquerque<br />
                 <small>from Lisboa, Portugal</small>
             </h1>
-            <Contacts />
-            <Languages />
-        </>
+            <div className="profile-icons">
+                <Contacts />
+                <Languages />
+            </div>
+        </div>
     );
 }

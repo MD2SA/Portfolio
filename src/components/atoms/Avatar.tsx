@@ -1,5 +1,3 @@
-
-
 export default function Avatar({ imageUrl }: { imageUrl: string, size?: number }) {
     return (
         <div className="avatarContainer">
