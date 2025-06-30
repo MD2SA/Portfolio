@@ -1,11 +1,12 @@
-export default function Avatar({ imageUrl }: { imageUrl: string, size?: number }) {
+import avatar from "../../assets/images/avatar.jpg"
+
+export default function Avatar() {
     return (
         <div className="avatarContainer">
             <div className="avatarGlow"></div>
             <div className="avatarBorder"></div>
             <img
-                src={imageUrl}
-                alt="Profile"
+                src={avatar}
                 className="avatarImage"
             />
             <div className="avatarShine"></div>

@@ -138,7 +138,7 @@
     letter-spacing: 0.5px;
 }
 
-.name-heading {
+.profile-name-heading {
     font-weight: 700;
     font-size: 2rem;
     color: #ffffff;
@@ -147,7 +147,7 @@
     line-height: 1.2;
 }
 
-.name-heading small {
+.profile-name-heading small {
     display: block;
     font-weight: 400;
     font-size: 1.1rem;
@@ -156,7 +156,7 @@
     letter-spacing: 0.8px;
 }
 
-.name-heading:hover small {
+.profile-name-heading:hover small {
     color: rgba(255, 255, 255, 0.95);
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
@@ -185,7 +185,7 @@
         flex-direction: row;
     }
 
-    .name-heading {
+    .profile-name-heading {
         grid-area: name;
     }
 

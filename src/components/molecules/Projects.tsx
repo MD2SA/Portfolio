@@ -5,7 +5,7 @@ import { FaGithub, FaLock, FaLockOpen } from "react-icons/fa6";
 import { projects } from "../../assets/constants";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
 
-export default function SlideShow() {
+export default function Projects() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [showDetail, setShowDetail] = useState(false);
     const [lockDetail, setLockDetail] = useState(false);
@@ -18,15 +18,15 @@ export default function SlideShow() {
     const isTouchDevice = useMediaQuery("(hover: none)");
 
     return (
-        <div className="slideshow-container">
+        <div className="projects-container">
             <div>
-                <div className="slideshow-top-container">
+                <div className="projects-top-container">
                     <h2>Projects</h2>
                     {currentProject.github ?
                         (
                             <FaGithub
                                 onClick={() => window.open(currentProject.github, "_blank")}
-                                className="glass-base slideshow-details-button"
+                                className="glass-base projects-details-button"
                             />
                         ) : (
                             null
@@ -35,7 +35,7 @@ export default function SlideShow() {
                 </div>
                 <div>
                     <div
-                        className="slideshow-image-wrapper"
+                        className="projects-image-wrapper"
                         onMouseOver={!isTouchDevice ? () => setShowDetail(true) : undefined}
                         onMouseLeave={!isTouchDevice ? () => setShowDetail(false) : undefined}
                         onClick={() => {
@@ -45,28 +45,28 @@ export default function SlideShow() {
                     >
                         <img
                             src={currentProject.img}
-                            className="slideshow-image"
+                            className="projects-image"
                             alt={currentProject.title}
                         />
-                        <div className={`slideshow-icons-container ${showDetail || lockDetail ? "visible" : ""}`}>
+                        <div className={`projects-icons-container ${showDetail || lockDetail ? "visible" : ""}`}>
                             {
                                 currentProject.technologies.map((tech, index) => {
                                     const { icon: Icon } = tech;
                                     return (
-                                        <div key={`tech-${index}`} className="slideshow-icon">
+                                        <div key={`tech-${index}`} className="projects-icon">
                                             <Icon />
                                         </div>
                                     );
                                 })
                             }
                         </div>
-                        <div className={`slideshow-description ${showDetail || lockDetail ? "visible" : ""}`}>
+                        <div className={`projects-description ${showDetail || lockDetail ? "visible" : ""}`}>
                             <p>{currentProject.description}</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="slideshow-navigation">
+            <div className="not-selectable projects-navigation">
                 <MdOutlineNavigateBefore onClick={goBack} className="glass-base nav-icon" />
                 <button onClick={() => setLockDetail(!lockDetail)} className="glass-base see-more-btn">{lockDetail ? <FaLock /> : <FaLockOpen />}</button>
                 <MdOutlineNavigateNext onClick={goForward} className="glass-base nav-icon" />

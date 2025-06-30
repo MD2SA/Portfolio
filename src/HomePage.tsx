@@ -1,9 +1,9 @@
 import { useEffect, useRef } from "react";
-import SlideShow from "./components/molecules/SlideShow";
+import Projects from "./components/molecules/Projects";
 import Description from "./components/atoms/Description";
 import ProfileSection from "./components/organisms/ProfileSection";
 import TimeLine from "./components/molecules/TimeLine";
-import IconsSection from "./components/organisms/IconsSection";
+import Tools from "./components/organisms/Tools";
 
 
 export default function HomePage() {
@@ -32,8 +32,8 @@ export default function HomePage() {
             </div>
             <div className="homepage-wide" ref={wideContainerRef}>
                 <Description />
-                <SlideShow />
-                <IconsSection />
+                <Projects />
+                <Tools />
                 <TimeLine />
             </div>
         </div>

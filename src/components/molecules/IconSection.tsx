@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { BiStar } from "react-icons/bi";
 import { MdOutlineNavigateBefore, MdOutlineNavigateNext } from "react-icons/md";
-import type { IconItem } from "../../assets/constants";
+import type { IconItem, IconSection } from "../../assets/constants";
 
-export default function SectionIcons({ sections }: { sections: IconSection[] }) {
+export default function IconSection({ sections }: { sections: IconSection[] }) {
 
     const [cur, setCur] = useState<number>(0);
 
@@ -29,7 +29,7 @@ export default function SectionIcons({ sections }: { sections: IconSection[] }) 
                     })}
                 </div>
             </div>
-            <div className="section-icon-navigation">
+            <div className="not-selectable section-icon-navigation">
                 <MdOutlineNavigateBefore onClick={goBack} className="nav-icon" />
                 <MdOutlineNavigateNext onClick={goForward} className="nav-icon" />
             </div>

@@ -1,4 +1,3 @@
-import avatar from "../../assets/images/avatar.jpg"
 import Avatar from "../atoms/Avatar";
 import Contacts from "../molecules/Contacts";
 import Languages from "../molecules/Languages";
@@ -7,8 +6,8 @@ import Languages from "../molecules/Languages";
 export default function ProfileSection() {
     return (
         <div className="profile-container">
-            <Avatar imageUrl={avatar} />
-            <h1 className="name-heading">
+            <Avatar />
+            <h1 className="profile-name-heading">
                 Manuel Albuquerque<br />
                 <small>from Lisboa, Portugal</small>
             </h1>
