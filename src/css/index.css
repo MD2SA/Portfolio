@@ -42,10 +42,10 @@ a:hover {
 }
 
 /*necessary to avoid bouncing titles*/
-h2 {
+h2,
+h1 {
     position: relative;
     z-index: 1;
-    background-color: transparent;
 }
 
 ::-webkit-scrollbar {
@@ -65,4 +65,3 @@ h2 {
 ::-webkit-scrollbar-thumb:hover {
     background: #aaa;
 }
-
