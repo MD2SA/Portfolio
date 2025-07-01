@@ -161,7 +161,7 @@
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: 840px) {
+@media (max-width: 840px) or (max-height:615px) {
     :root {
         --avatar-size: var(--avatar-small-size);
     }
