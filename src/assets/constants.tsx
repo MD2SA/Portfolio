@@ -151,7 +151,7 @@ export const description = {
 
             Right now, I’m gearing up to launch a tech startup from scratch, picking up skills across the board, from crunching numbers in finance and accounting to coding, marketing, and even some of those HR vibes.
 
-            I’m going all in, consistently landing in the top 5 in computer science classes of 150–300 peers.
+            I’m going all in, consistently landing in the top 5 in most computer science classes of 150–300 peers.
 `,
 }
 
