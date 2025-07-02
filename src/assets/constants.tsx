@@ -144,22 +144,21 @@ export const sections: IconSection[] = [
 
 export const description = {
     title: "Computer Science & Business Management Student - ISCTE",
-    text: ` I’ve got this wild personal drive to be the best at what I love, purely for me.
-            Luckily, I genuinely dig everything my degree throws at me.
+    text: ` I’m personally driven to excel at what I enjoy, mostly for my own satisfaction.
+            Luckily, I actually enjoy most of what I learn.
 
             Whether it’s in my “unfinishable” side projects or completed ones, I’ve been able to put theory into practice, or at least imagine how.
 
-            Right now, I’m gearing up to launch a tech startup from scratch, picking up skills across the board, from crunching numbers in finance and accounting to coding, marketing, and even some of those HR vibes.
+            Right now, I’m steadily picking up skills across the board, from crunching numbers in finance and accounting to coding, marketing, and even HR.
 
-            I’m hooked, so going all in is instinct. That’s what keeps landing me in the top 5 of most CS classes with 150–300 students.
+            Since I genuinely enjoy all of that, going all in feels natural. That’s what keeps landing me in the top 5 of most CS classes with 150–300 students.
 `,
 }
 
-const email = "albuquerque2158@gmail.com";
 const subject = encodeURIComponent("Hello from your website");
 const body = encodeURIComponent("Hello Manuel,\n\nI came across your website and wanted to get in touch with you.\n\nBest regards,\n[Your Name]");
 
-const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`;
+const mailtoLink = `mailto:albuquerque2158@gmail.com?subject=${subject}&body=${body}`;
 
 export const contacts = [
     {
