@@ -1,21 +1,53 @@
-import { useState } from "react";
+import { memo, useCallback, useMemo, useState } from "react";
 import { MdOutlineNavigateBefore, MdOutlineNavigateNext } from "react-icons/md";
 import { FaGithub, FaLock, FaLockOpen } from "react-icons/fa6";
 
-import { projects } from "../../assets/constants";
+import { projects, type IconItem } from "../../assets/constants";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
+
+const TechIcons = memo(({ technologies }: { technologies: IconItem[] }) => (
+    <>
+        {
+            technologies.map((tech: IconItem, index) => {
+                const { icon: Icon } = tech;
+                return (
+                    <div key={`tech-${index}`} className="projects-icon">
+                        <Icon />
+                    </div>
+                );
+            })
+        }
+    </>
+));
+
 
 export default function Projects() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [showDetail, setShowDetail] = useState(false);
     const [lockDetail, setLockDetail] = useState(false);
 
-    const goBack = () => setCurrentIndex((prev) => (prev - 1 + projects.length) % projects.length);
-    const goForward = () => setCurrentIndex((prev) => (prev + 1) % projects.length);
+    const goBack = useCallback(() => {
+        setCurrentIndex((prev) => (prev - 1 + projects.length) % projects.length)
+    }, []);
+    const goForward = useCallback(() => {
+        setCurrentIndex((prev) => (prev + 1) % projects.length)
+    }, []);
 
-    const currentProject = projects[currentIndex];
+    const currentProject = useMemo(() => projects[currentIndex], [currentIndex]);
 
     const isTouchDevice = useMediaQuery("(hover: none)");
+
+    const handleMouseOver = useCallback(() => {
+        setShowDetail(true);
+    }, []);
+
+    const handleMouseLeave = useCallback(() => {
+        setShowDetail(false);
+    }, []);
+    const handleOnClick = useCallback(() => {
+        setLockDetail(prev => !prev);
+        setShowDetail(false);
+    }, []);
 
     return (
         <div className="projects-container">
@@ -36,12 +68,9 @@ export default function Projects() {
                 <div>
                     <div
                         className="projects-image-wrapper"
-                        onMouseOver={!isTouchDevice ? () => setShowDetail(true) : undefined}
-                        onMouseLeave={!isTouchDevice ? () => setShowDetail(false) : undefined}
-                        onClick={() => {
-                            setLockDetail(!lockDetail)
-                            setShowDetail(false);
-                        }}
+                        onMouseOver={!isTouchDevice ? handleMouseOver : undefined}
+                        onMouseLeave={!isTouchDevice ? handleMouseLeave : undefined}
+                        onClick={handleOnClick}
                     >
                         <img
                             src={currentProject.img}
@@ -49,16 +78,7 @@ export default function Projects() {
                             alt={currentProject.title}
                         />
                         <div className={`projects-icons-container ${showDetail || lockDetail ? "visible" : ""}`}>
-                            {
-                                currentProject.technologies.map((tech, index) => {
-                                    const { icon: Icon } = tech;
-                                    return (
-                                        <div key={`tech-${index}`} className="projects-icon">
-                                            <Icon />
-                                        </div>
-                                    );
-                                })
-                            }
+                            <TechIcons technologies={currentProject.technologies} />
                         </div>
                         <div className={`projects-description ${showDetail || lockDetail ? "visible" : ""}`}>
                             <p>{currentProject.description}</p>

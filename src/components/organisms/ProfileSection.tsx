@@ -1,4 +1,4 @@
-import avatar from "../../assets/images/avatar.jpg"
+import avatar from "../../assets/images/avatar.webp"
 import Contacts from "../molecules/Contacts";
 import Languages from "../molecules/Languages";
 

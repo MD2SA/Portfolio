@@ -1,5 +1,5 @@
 import DonkeyKong from "./images/DonkeyKong.png";
-import NOGS from "./images/NOGS.png";
+import NOGS from "./images/NOGS.webp";
 import Confidential from "./images/Confidential.png";
 
 import type { IconType } from "react-icons";
