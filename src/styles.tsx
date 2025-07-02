@@ -1,6 +1,6 @@
 import "./css/index.css"
 import "./css/Common.css"
-import "./css/HomePage.css";
+import "./css/App.css";
 import "./css/Profile.css";
 import "./css/Description.css";
 import "./css/Projects.css";
