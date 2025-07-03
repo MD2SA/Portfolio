@@ -1,9 +1,16 @@
-import { memo, useCallback, useMemo, useState } from "react";
+import { memo, useCallback, useEffect, useMemo, useState } from "react";
 import { MdOutlineNavigateBefore, MdOutlineNavigateNext } from "react-icons/md";
 import { FaGithub, FaLock, FaLockOpen } from "react-icons/fa6";
 
 import { projects, type IconItem } from "../../assets/constants";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
+
+useEffect(() => {
+    projects.forEach((project) => {
+        const img = new Image();
+        img.src = project.img;
+    });
+}, []);
 
 const TechIcons = memo(({ technologies }: { technologies: IconItem[] }) => (
     <>
@@ -116,6 +123,8 @@ export default function Projects() {
                             src={currentProject.img}
                             className="projects-image"
                             alt={currentProject.title}
+                            decoding="async"
+                            fetchPriority="high"
                         />
                         <ProjectDetails project={currentProject} visible={showDetail || lockDetail} />
                     </div>
