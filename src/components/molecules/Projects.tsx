@@ -5,13 +5,6 @@ import { FaGithub, FaLock, FaLockOpen } from "react-icons/fa6";
 import { projects, type IconItem } from "../../assets/constants";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
 
-useEffect(() => {
-    projects.forEach((project) => {
-        const img = new Image();
-        img.src = project.img;
-    });
-}, []);
-
 const TechIcons = memo(({ technologies }: { technologies: IconItem[] }) => (
     <>
         {
@@ -98,6 +91,15 @@ export default function Projects() {
     const toggleLockDetail = useCallback(() => {
         setLockDetail(prev => !prev);
     }, []);
+
+
+    useEffect(() => {
+        projects.forEach((project) => {
+            const img = new Image();
+            img.src = project.img;
+        });
+    }, []);
+
 
     return (
         <div className="projects-container">
