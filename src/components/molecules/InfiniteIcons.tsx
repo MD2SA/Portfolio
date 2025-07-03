@@ -1,12 +1,16 @@
+import { memo, useMemo } from "react";
 import type { IconItem, IconSection } from "../../assets/constants";
+import { sections } from "../../assets/constants";
 
+const RenderRow = memo(({ icons, row }: { icons: IconItem[], row: number }) => {
 
-
-function renderRow(icons: IconItem[], row: number) {
     const rowClass = row % 2 === 0 ? 'even' : 'odd';
+
+    const memoIcons = useMemo(() => [...icons, ...icons, ...icons], [icons]);
+
     return (
-        <div className={`marquee-track ${rowClass}`} key={`row-${row}`}>
-            {[...icons, ...icons, ...icons].map((item: IconItem, col: number) => (
+        <div className={`marquee-track ${rowClass}`} >
+            {memoIcons.map((item: IconItem, col: number) => (
                 <div key={`${item.name}-${row}-${col}`} className="container-techIcon">
                     <item.icon />
                     <span>{item.name}</span>
@@ -14,15 +18,15 @@ function renderRow(icons: IconItem[], row: number) {
             ))}
         </div>
     );
-}
+});
 
-export default function InfiniteIcons({ sections }: { sections: IconSection[] }) {
+function InfiniteIcons() {
     return (
         <div className="infiniteIcons-container">
             <h2>Languages, FrameWorks & Tools</h2>
             <div className="marquee-wrapper">
                 {sections.map((section: IconSection, sectionidx: number) =>
-                    renderRow(section.icons, sectionidx)
+                    <RenderRow icons={section.icons} row={sectionidx} key={`row-${sectionidx}`} />
                 )}
             </div>
         </div>
@@ -30,3 +34,5 @@ export default function InfiniteIcons({ sections }: { sections: IconSection[] })
     );
 }
 
+
+export default memo(InfiniteIcons);
