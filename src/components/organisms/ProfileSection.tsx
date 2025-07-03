@@ -1,4 +1,3 @@
-import avatar from "../../assets/images/avatar.webp"
 import Contacts from "../molecules/Contacts";
 import Languages from "../molecules/Languages";
 
@@ -7,7 +6,7 @@ export default function ProfileSection() {
     return (
         <div className="profile-container">
             <img
-                src={avatar}
+                src="https://788ab0ljfw.ufs.sh/f/vbCj41Bx9xYQObtMK8cPN9DUJYbefVjgksAZc7qy5iGH1lh3"
                 className="avatarImage"
             />
             <h1 className="profile-name-heading">

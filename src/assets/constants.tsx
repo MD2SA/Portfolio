@@ -1,7 +1,3 @@
-import DonkeyKong from "./images/DonkeyKong.png";
-import NOGS from "./images/NOGS.webp";
-import Confidential from "./images/Confidential.png";
-
 import type { IconType } from "react-icons";
 import { FaJava } from "react-icons/fa";
 import { SiDjango, SiEclipseide, SiGit, SiGithub, SiGnubash, SiJavascript, SiNeovim, SiPycharm, SiPython, SiReact, SiSqlite, SiTypescript } from "react-icons/si";
@@ -11,16 +7,10 @@ import { GrMysql } from "react-icons/gr";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
-import uk from "./images/uk-flag.svg";
-import spain from "./images/spain-flag.svg";
-import portugal from "./images/portugal-flag.svg";
-
-
-
 export const projects = [
     {
         title: "NOGS",
-        img: NOGS,
+        img: "https://788ab0ljfw.ufs.sh/f/vbCj41Bx9xYQplUdaWemeVqWwiKDXPHnSG6fs0gZlAxFkuI4",
         description: "NOGS is a full-stack typing game platform where users can improve their typing speed, compete against random opponents, and connect with friends or join teams.",
         github: "https://github.com/MD2SA/NOGS",
         technologies: [
@@ -33,7 +23,7 @@ export const projects = [
     },
     {
         title: "DonkeyKong",
-        img: DonkeyKong,
+        img: "https://788ab0ljfw.ufs.sh/f/vbCj41Bx9xYQ491uzdjgX2k3BSMlKPNdFmwQ90bqVYrcjDoI",
         description: "This is a 2D game inspired by the classic Donkey Kong, developed entirely in Java. The project was originally created as part of the Object-Oriented Programming course, and is currently taking updates for new features",
         github: "https://github.com/MD2SA/DonkeyKong",
         technologies: [
@@ -42,7 +32,7 @@ export const projects = [
     },
     {
         title: "Confidential",
-        img: Confidential,
+        img: "https://788ab0ljfw.ufs.sh/f/vbCj41Bx9xYQ6Ew1TcsJWYr7tcy1uRmne4hSjaN0fZl5TvVk",
         description: "I am currently developing a full-stack mobile app. For this project, I had to scrape multiple forms of content from the internet to populate the information database. Aside from that, the details are confidential.",
         github: undefined,
         technologies: [
@@ -57,9 +47,9 @@ export const projects = [
 
 
 export const languages: { code: string, level: string, src: string }[] = [
-    { code: "pt", level: "Native", src: portugal, },
-    { code: "en", level: "Fluent", src: uk, },
-    { code: "es", level: "Basic", src: spain, },
+    { code: "pt", level: "Native", src: "https://788ab0ljfw.ufs.sh/f/vbCj41Bx9xYQfsYGL8F90NhitPXU4OqoZlDAnpeHEruYgG2L", },
+    { code: "en", level: "Fluent", src: "https://788ab0ljfw.ufs.sh/f/vbCj41Bx9xYQo0kntU4rSXf8vgelw60hZ1nOUtbqKxApD3jV", },
+    { code: "es", level: "Basic", src: "https://788ab0ljfw.ufs.sh/f/vbCj41Bx9xYQ7kFbgf8uNh3ykK91MtADxc8FpORZ6qEfXLBT", },
 ];
 
 
