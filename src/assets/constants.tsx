@@ -134,14 +134,13 @@ export const sections: IconSection[] = [
 
 export const description = {
     title: "Computer Science & Business Management Student - ISCTE",
-    text: ` I’m personally driven to excel at what I enjoy, mostly for my own satisfaction.
-            Luckily, I actually enjoy most of what I learn.
-
-            Whether it’s in my “unfinishable” side projects or completed ones, I’ve been able to put theory into practice, or at least imagine how.
+    text: ` It's second nature for me to dive deeply into what I find engaging, and this field offers no shortage of opportunities worth diving into.
 
             Right now, I’m steadily picking up skills across the board, from crunching numbers in finance and accounting to coding, marketing, and even HR.
 
-            Since I genuinely enjoy all of that, going all in feels natural. That’s what keeps landing me in the top 5 of most CS classes with 150–300 students.
+            Whether it’s in my “unfinishable” side projects or completed ones, I’ve been able to put theory into practice, or at least imagine how.
+
+            Since I genuinely enjoy it all, going all in feels natural. That’s what keeps landing me in the top 5 of most CS classes with 150–300 students.
 `,
 }
 
