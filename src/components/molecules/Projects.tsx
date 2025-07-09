@@ -49,7 +49,7 @@ const Navigation = memo(
         <div className="not-selectable projects-navigation">
             <MdOutlineNavigateBefore onClick={onBack} className="glass-base nav-icon" />
             <button onClick={toggleLock} className="glass-base see-more-btn">
-                <span>{lockDetail ? <FaLock /> : <FaLockOpen />}</span>
+                <span className="small-icon">{lockDetail ? <FaLock /> : <FaLockOpen />}</span>
                 <span>Details</span>
             </button>
             <MdOutlineNavigateNext onClick={onForward} className="glass-base nav-icon" />
