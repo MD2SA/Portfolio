@@ -140,7 +140,7 @@ export const description = {
 
             Whether it’s in my “unfinishable” side projects or completed ones, I’ve been able to put theory into practice, or at least imagine how.
 
-            Since I genuinely enjoy it all, going all in feels natural. That’s what keeps landing me in the top 5 of most CS classes with 150–300 students.
+            Since I genuinely enjoy it all, going all in feels natural. That’s what keeps landing me in the top of most CS classes.
 `,
 }
 
