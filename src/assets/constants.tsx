@@ -38,7 +38,7 @@ export const projects = [
         technologies: [
             { name: "Python", icon: SiPython },
             { name: "TypeScript", icon: SiTypescript },
-            { name: "React", icon: SiReact },
+            { name: "React Native", icon: SiReact },
             { name: "Django", icon: SiDjango },
             { name: "PostgreSQL", icon: BiLogoPostgresql },
         ],
@@ -114,6 +114,7 @@ export const sections: IconSection[] = [
         icons: [
             { name: "React", icon: SiReact, favorite: true, },
             { name: "MySQL", icon: GrMysql, },
+            { name: "React Native", icon: SiReact, },
             { name: "Django", icon: SiDjango, favorite: true, },
             { name: "SQLite", icon: SiSqlite, },
             { name: "PostgreSQL", icon: BiLogoPostgresql, },
