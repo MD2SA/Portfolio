@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useState } from "react";
 import { BiStar } from "react-icons/bi";
 import { MdOutlineNavigateBefore, MdOutlineNavigateNext } from "react-icons/md";
 import type { IconItem, IconSection } from "../../assets/constants";
@@ -10,8 +10,8 @@ export default function IconSection() {
 
     const section = sections[cur];
 
-    const goBack = useCallback(() => setCur((prev) => (prev - 1 + sections.length) % sections.length), [sections.length]);
-    const goForward = useCallback(() => setCur((prev) => (prev + 1) % sections.length), [sections.length]);
+    const goBack = () => setCur((prev) => (prev - 1 + sections.length) % sections.length);
+    const goForward = () => setCur((prev) => (prev + 1) % sections.length);
 
     return (
         <div className="icon-section-container">
