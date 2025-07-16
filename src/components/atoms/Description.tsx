@@ -4,7 +4,7 @@ export default function Description() {
     return (
         <div className="description-container">
             <h1 className="description-title">{description.title}</h1>
-            <div className="glass-base description-content">
+            <div className="glass-base glass-advanced description-content">
                 <p className="description-text">
                     {description.text}
                 </p>

@@ -104,34 +104,30 @@ export default function Projects() {
 
     return (
         <div className="projects-container">
-            <div>
-                <div className="projects-top-container">
-                    <h2>Projects</h2>
-                    {currentProject.github && (
-                        <FaGithub
-                            onClick={openGithub}
-                            className="glass-base projects-details-button"
-                        />
-                    )}
-                </div>
-                <div>
-                    <div
-                        className="projects-image-wrapper"
-                        onMouseOver={!isTouchDevice ? handleMouseOver : undefined}
-                        onMouseLeave={!isTouchDevice ? handleMouseLeave : undefined}
-                        onClick={handleOnClick}
-                    >
-                        <img
-                            loading="lazy"
-                            src={currentProject.img}
-                            className="projects-image"
-                            alt={currentProject.title}
-                            decoding="async"
-                            fetchPriority="high"
-                        />
-                        <ProjectDetails project={currentProject} visible={showDetail || lockDetail} />
-                    </div>
-                </div>
+            <div className="projects-top-container">
+                <h2>Projects</h2>
+                {currentProject.github && (
+                    <FaGithub
+                        onClick={openGithub}
+                        className="glass-base projects-details-button"
+                    />
+                )}
+            </div>
+            <div
+                className="projects-image-wrapper"
+                onMouseOver={!isTouchDevice ? handleMouseOver : undefined}
+                onMouseLeave={!isTouchDevice ? handleMouseLeave : undefined}
+                onClick={handleOnClick}
+            >
+                <img
+                    loading="lazy"
+                    src={currentProject.img}
+                    className="projects-image"
+                    alt={currentProject.title}
+                    decoding="async"
+                    fetchPriority="high"
+                />
+                <ProjectDetails project={currentProject} visible={showDetail || lockDetail} />
             </div>
             <Navigation onBack={goBack} onForward={goForward} lockDetail={lockDetail} toggleLock={toggleLockDetail} />
         </div>
